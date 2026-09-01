@@ -33,10 +33,12 @@ vlan 100
 
 end
 
-### exit configuration mode
-end 
+```
 
 ### Verify 
 show vlan brief
 
-![Vlan brief](img/)
+![Vlan brief][img/vlan_brief.jpg]
+```
+
+![Vlan brief][img/vlan_brief.jpg]
