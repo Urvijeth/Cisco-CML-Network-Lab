@@ -107,3 +107,14 @@ show ip interface brief
 ```
 ![Network Topology](../img/vlan-ip-set.jpg)
 
+### IOSV2-CORE and configure the port connected to IT-SW (Gi0/1) as a trunk
+```
+enable
+configure terminal
+interface gigabitEthernet 0/1
+switchport mode trunk
+no shutdown
+end
+```
+
+
