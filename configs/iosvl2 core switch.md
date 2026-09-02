@@ -2,7 +2,7 @@
 
 The IOSV2-CORE switch is configured with the required VLANs to provide network segmentation for different departments and network services.
 
-### Step 1: Create VLANs
+###  Create VLANs
 
 Start the Cisco Core Switch in Cisco Modeling Labs (CML). Right-click the **IOSV2-CORE** device and select **Console**.
 
@@ -43,7 +43,7 @@ vlan 100
 end
 ```
 
-### Step 2: Verify VLAN Configuration
+### Verify VLAN Configuration
 
 Run the following command to verify that all VLANs have been created successfully:
 
@@ -61,9 +61,49 @@ show vlan brief
 | 40 | MANAGEMENT | Network Management |
 | 50 | SERVER | Server Network |
 | 100 | DMZ | DMZ Network |
+```
+```
+### Verify VLAN Configuration
+```
+Configure the Core Switch gateway IPs
+enable
+configure terminal
 
-### Verification Output
+interface vlan 10
+ip address 192.168.10.1 255.255.255.0
+no shutdown
+exit
 
-The following output confirms that the VLANs were successfully created on the IOSV2-CORE switch.
+interface vlan 20
+ip address 192.168.20.1 255.255.255.0
+no shutdown
+exit
 
-![VLAN Brief](img/vlan_brief.jpg)
+interface vlan 30
+ip address 192.168.30.1 255.255.255.0
+no shutdown
+exit
+
+interface vlan 40
+ip address 192.168.40.1 255.255.255.0
+no shutdown
+exit
+
+interface vlan 50
+ip address 192.168.50.1 255.255.255.0
+no shutdown
+exit
+
+interface vlan 100
+ip address 192.168.100.1 255.255.255.0
+no shutdown
+exit
+end 
+
+```
+### check the config
+```
+show ip interface brief
+```
+![Network Topology](img/vlan-ip-set.jpg)
+
