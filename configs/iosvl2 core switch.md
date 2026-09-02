@@ -105,5 +105,5 @@ end
 ```
 show ip interface brief
 ```
-![Network Topology](img/vlan-ip-set.jpg)
+![Network Topology](../img/vlan-ip-set.jpg)
 
