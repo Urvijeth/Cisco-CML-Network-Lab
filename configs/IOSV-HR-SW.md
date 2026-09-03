@@ -36,3 +36,6 @@ switchport access vlan 20
 no shutdown
 end
 ```
+**same as the above configure Gi0/2 → HR-PC2 for VLAN 20**
+ 
+
