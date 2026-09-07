@@ -126,5 +126,39 @@ switchport mode trunk
 no shutdown
 end
 ```
+### IOSVL2-CORE SWITCH and configure Gi1/1 as a trunk set to the Server
+```
+enable
+configure terminal
+interface gigabitEthernet 1/1
+switchport trunk encapsulation dot1q
+switchport mode trunk
+no shutdown
+end
+```
+###  IOSVL2-CORE and remove the IP gateway from VLAN 100
+```
+enable
+configure terminal
+interface vlan 100
+no ip address
+shutdown
+end
+```
 
+**This does not delete VLAN 100 from the switch. It simply stops the Core from being the DMZ gateway Tell me done**
 
+### Core G0/0 interface that connects to ASAv G0/1
+```
+configure terminal
+interface gigabitEthernet0/0
+no switchport
+ip address 192.168.254.1 255.255.255.252
+no shutdown
+end
+```
+### default route on the Core pointing to the ASAv inside interface
+```
+config terminal
+default route on the Core pointing to the ASAv inside interface
+```
