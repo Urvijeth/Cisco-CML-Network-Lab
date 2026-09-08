@@ -68,3 +68,10 @@ object network INSIDE-NET
 subnet 192.168.0.0 255.255.0.0
 nat (inside,outside) dynamic interface
 ```
+### rule written on  firewall too Allow the EDGE (203.0.113.1) to send ping/ICMP traffic to the WEB-SERVER (192.168.100.10) through the ASAv.
+```
+configure terminal
+access-list OUTSIDE_IN extended permit icmp host 203.0.113.1 host 192.168.100.10
+end
+```
+
